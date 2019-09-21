@@ -2,18 +2,22 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:async';
-import 'dart:convert';
+
+// import 'dart:async';
+// import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+// import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:http/http.dart' as http;
 
-// void main() => runApp(MyApp(post: fetchPost()));
 void main() => runApp(MyApp());
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyApp createState() => _MyApp();
+}
+class _MyApp extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       title: '🔥 Alert',
       theme: ThemeData(
@@ -51,64 +55,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-// class MyApp extends StatelessWidget {
-//   final Future<Post> post;
-//   MyApp({Key key, this.post}) : super(key: key);
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: '🔥 Alert',
-//       theme: ThemeData(
-//         primarySwatch: Colors.amber,
-//       ),
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('🔥 Alert'),
-//         ),
-//         body: Center(
-//           child: FutureBuilder<Post>(
-//             future: post,
-//             builder: (context, snapshot){
-//               print("entered");
-//               print("snapshot is $snapshot");
-//               if (snapshot.hasData){
-//                 return Text(snapshot.data.title);
-//               } else if (snapshot.hasError){
-//                 return Text("${snapshot.error}");
-//               }
-//               return CircularProgressIndicator();
-//             },
-//           ),
-//         ),
-//       )
-//     );
-//   }
-// }
-
-// class Post {
-//   final int userId;
-//   final int id;
-//   final String title;
-//   final String body;
-
-//   Post({this.userId, this.id, this.title, this.body});
-
-//   factory Post.fromJson(Map<String, dynamic> json) {
-//     return Post(
-//       userId: json['userId'],
-//       id: json['id'],
-//       title: json['title'],
-//       body: json['body'],
-//     );
-//   }
-// }
-
-// Future<Post> fetchPost() async {
-//   final response = await http.get('https://jsonplaceholder.typicode.com/posts/1');
-//   if (response.statusCode == 200){
-//     return Post.fromJson(json.decode(response.body));
-//   } else {
-//     throw Exception("Failed to fetch data");
-//   }
-// }
-
