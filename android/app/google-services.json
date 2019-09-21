@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "957842851325",
+    "firebase_url": "https://noble-office-253607.firebaseio.com",
+    "project_id": "noble-office-253607",
+    "storage_bucket": "noble-office-253607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957842851325:android:1bf30ab9e4e98094ce0594",
+        "android_client_info": {
+          "package_name": "com.example.famber_alert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957842851325-df2tftivhote3gsce1ko8ouqrlskd1si.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj_WJW53r29QY2SnfaVbPwXAdv4IB-8-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957842851325-df2tftivhote3gsce1ko8ouqrlskd1si.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
