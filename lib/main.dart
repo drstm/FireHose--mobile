@@ -7,7 +7,7 @@
 // import 'dart:convert';
 
 import 'package:flutter/material.dart';
-// import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:http/http.dart' as http;
 
 void main() => runApp(MyApp());
@@ -16,6 +16,15 @@ class MyApp extends StatefulWidget {
   _MyApp createState() => _MyApp();
 }
 class _MyApp extends State<MyApp> {
+  final FirebaseMessaging firebaseMessaging = FirebaseMessaging();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    firebaseMessaging.getToken().then((token){
+      print(token);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
